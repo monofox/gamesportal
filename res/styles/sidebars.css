@@ -1,0 +1,105 @@
+/*General sidebar settings*/
+div.sideBar {
+    width: 16.45em;
+    font-size: 0.69em;
+    padding:0;
+    min-height: 10em;
+    padding: 1em 1em 1em 1em;
+    padding-bottom: 2000px;
+    margin-bottom:-2000px;
+}
+
+/*left sidebar*/
+div#sidebar_left {
+    clear: both;
+    float: left;
+    padding-right: 0;
+}
+
+/*right sidebar*/
+div#sidebar_right {
+    float: right;
+    padding-left: 0;
+}
+
+/*IE 6 - hack*/
+* html div#sidebar_left {
+    overflow: hidden;
+}
+
+div.box {
+    background-color:#fff;
+    border-top-left-radius:5px 5px;
+    border-top-right-radius:5px 5px;
+    margin-bottom:1.5em;
+    width: 16.45em;
+    box-shadow: 5px 5px 5px #DDD;
+    -moz-box-shadow: 5px 5px 5px #DDD;
+    -webkit-box-shadow: 5px 5px 5px #DDD;
+    background-color: #fafafa;
+}
+
+div.box_content {
+    padding: 0.5em 0.3em 0.3em 0.3em;
+}
+
+/*normal header and special header for the navigation*/
+div.box div.box_header, div#box_nav .head {
+    color: #ffffff;
+    padding: 0.3em 0 0.1em 1em;
+    background: #6c95c1;
+    background: -moz-linear-gradient(top, #6c95c1 0%, #5b7ea6 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6c95c1), color-stop(100%,#5b7ea6));
+    background: -webkit-linear-gradient(top, #6c95c1 0%,#5b7ea6 100%);
+    background: -o-linear-gradient(top, #6c95c1 0%,#5b7ea6 100%);
+    background: -ms-linear-gradient(top, #6c95c1 0%,#5b7ea6 100%);
+    background: linear-gradient(top, #6c95c1 0%,#5b7ea6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c95c1', endColorstr='#5b7ea6',GradientType=0 );
+    height: 1.4em;
+    font-weight: bold;
+    border-top-left-radius:5px 5px;
+    border-top-right-radius:5px 5px;
+
+}
+
+
+/*link as title in the header*/
+div.box div.box_header a, div.box div.box_header a:hover, div.box div.box_header a:visited,
+div#box_nav .head a, div#box_nav .head a:visited, div#box_nav .head a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*footer*/
+div.box div.box_footer {
+    padding-bottom:0.5em;
+}
+
+div.sideBar a, .divdropbox a {
+    text-decoration: none;
+    border: none;
+    color: #5b7ea6;
+    font-weight: bold;
+}
+
+div.sideBar a:hover, .divdropbox a:hover {
+    text-decoration: underline;
+}
+
+div.sideBar a:active, .divdropbox a:active,
+div#box_nav div.menu a:active {
+    text-decoration: underline;
+    color: #FF9000;
+}
+
+div.box_header *{
+    float: left;
+}
+
+div.box_header img{
+    margin-right: 0.5em;
+}
+
+div.box_content{
+    clear: both;
+}

@@ -1,0 +1,24 @@
+.unterstrichen {
+    text-decoration: underline;
+}
+.blockschrift {
+    text-transform: uppercase;
+}
+.kleinschrift {
+    text-transform:lowercase;
+}
+.anfang_gros {
+    text-transform:capitalize;
+}
+.hg_schwarz {
+    background-color: black;
+}
+.hg_weiss {
+    background-color: white;
+}
+.hg_fls_blau {
+    background-color: #5b7ea6;
+}
+.hg_grau {
+    background-color: #dfdfdf;
+}
