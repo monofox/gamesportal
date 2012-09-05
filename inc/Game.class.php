@@ -124,10 +124,9 @@ class Game {
         $this->cover = $cover;
     }
 
-    public function createGame($desc, $features, Cover $cover, $usk) {
-    
-    }
-
+    /**
+     * @TODO: platforms, etc. pp. !?
+     */
     public function saveGame() {
         $db = Database2::getInstance();
         $q = $db->q(
@@ -147,6 +146,89 @@ class Game {
         }
 
         return $q;
+    }   
+
+    public static function searchGames($searchTerm) {
+        $db = Database2::getInstance();
+        $sh = new StatusHandler();
+        $list = explode('+', $searchTerm);
+
+        $args = array();
+        $sql = 'SELECT g.gameID FROM %pgame g JOIN %pgame_platform p ON g.gameID = p.gameID 
+            JOIN %pplatforms gp ON p.platID = gp.platID WHERE (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' g.gameTitle LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') OR (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' g.gameDescription LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') OR (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' g.gameFeatures LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') OR (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' g.gameUSK LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') OR (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' p.gamePrice LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') OR (';
+        $i = 0;
+        foreach ($list as $v) {
+            if ($i > 0) {
+                $sql .= ' AND';
+            }
+            $sql .= ' gp.platName LIKE %l';
+            $args[] = $v;
+            $i++;
+        }
+        $sql .= ') GROUP BY g.gameID';
+
+        $q = $db->q($sql, $args);
+        if ($q->hasData()) {
+            $sh->setStatus(true);
+            foreach ($q->getData() as $v) {
+                $sh->addData(new Game($v->gameID));
+            }
+        } else {
+            $sh->setStatus(false);
+            $sh->addInfo('Es konnte kein Spiel mit den Begriffen gefunden werden.');
+        }
+
+        return $sh;
     }
 
     public static function getList() {

@@ -46,7 +46,8 @@
                 <form id="form_hbar_menu_search" method="get" action="search"
                       onsubmit="changeWhiteSpace('form_hbar_menu_search_q');return true;">
                     <fieldset>
-                        <input id="form_hbar_menu_search_q" type="text" name="q"
+                        <input id="form_hbar_menu_search_q" type="text" name="q" 
+                               onfocus="leeren(this, false)" onblur="leeren(this, true)"
                                value="{if isset($keywords)}{$keywords}{else}Suchen...{/if}" />
                         <button type="submit">&nbsp;</button>
                     </fieldset>
