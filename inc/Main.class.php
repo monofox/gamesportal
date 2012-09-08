@@ -227,6 +227,8 @@ class Main {
         global $url;
         $this->initUrl();
         $conf = Configuration::getInstance();
+        $user = new User();
+
         $tpl = new Smarty_FLS(
                         $conf->smarty->templateDir->getValue(),
                         $conf->smarty->compileDir->getValue(),
@@ -234,12 +236,10 @@ class Main {
                         $conf->smarty->configDir->getValue()
         );
         
-        $user = new User();
         $content = new Content();
 
         //TPL init
-        $tpl->assign("title", $conf->default->name->getValue());
-        $tpl->assignByRef('user_detail', $user->userData);
+        $tpl->assign('title', $conf->default->name->getValue());
 
         // We have to detect the file preamble
         $fileDir = strtolower($conf->default->filedir->value);
@@ -248,14 +248,6 @@ class Main {
         //Here the context of the page is decided
         header("content-type: text/html; charset=utf-8");
         switch ($url[0]) {
-            case 'geco':
-                include_once './geco.php';
-                break;
-            case (substr($urlFlat, 0, strlen($fileDir)) === $fileDir):
-            case 'download':
-                $downloadC = new Download();
-                $downloadC->execute($url);
-                break;
             case 'res':
                 break;
             default:
@@ -399,7 +391,7 @@ class Main {
         if (isset($_SESSION['lastSite'])) {
             $url = $_SESSION['lastSite'];
         } else {
-            $url = '';
+            $url = 'home';
         }
         $this->restart($url);
     }

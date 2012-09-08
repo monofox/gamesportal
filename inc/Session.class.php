@@ -160,7 +160,7 @@ class Session extends Listenable {
      *  @return boolean
      */
     public function _write($ses_id, $data) {
-        $uid = User::getInstance()->getUid();
+        $uid = User::getInstance()->getID();
 
         if ($this->issetSession($ses_id)) {
             $q = $this->db->q(

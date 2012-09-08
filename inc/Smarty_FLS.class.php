@@ -30,7 +30,7 @@ if (!class_exists('Smarty')) {
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
  * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/Smarty_FLS.class.php
  */
-class Smarty_FLS extends Smarty {
+class Smarty_FLS extends Smarty implements Listener {
     /*
      * @var Smarty_FLS the instance
      */
@@ -85,6 +85,12 @@ class Smarty_FLS extends Smarty {
     public static function setInstance(Smarty_FLS $tpl = null) {
         if (self::getInstance() == null || $tpl == null) {
             self::$instance = $tpl;
+            if ($tpl != null && User::getInstance() != null) {
+                User::getInstance()->addListener(self::$instance);
+                if (User::getInstance()->isLoggedIn()) {
+                    $tpl->actionPerformed('login');
+                }                                 
+            }
         }
     }
 
@@ -162,6 +168,23 @@ class Smarty_FLS extends Smarty {
 
     public function setDisplay($disp = true) {
         $this->display = $disp;
+    }
+
+    public function actionPerformed($action, $data = false) {
+        switch ($action) {
+            case 'login':
+                $this->assign('loggedin', true);
+                $this->assign('userFirstName', User::getInstance()->getFirstName());
+                $this->assign('userLastName', User::getInstance()->getLastName());
+                $this->assign('userID', User::getInstance()->getID());
+                break;
+            case 'logout':
+                $this->assign('loggedin', false);
+                $this->assign('userFirstName', '');
+                $this->assign('userLastName', '');
+                $this->assign('userID', 0); 
+                break;
+        }
     }
 
     /**

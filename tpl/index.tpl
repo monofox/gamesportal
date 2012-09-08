@@ -56,6 +56,22 @@
         </div>
 
         <div class="sideBar" id="sidebar_left">
+        {if isset($loggedin) && $loggedin}
+            <div class="box">
+                <div class="handler"></div>
+                <div class="box_header">
+                    <img alt="Login-Box" src="res/ico/user.png" />
+                    <div class="box_title">Sie sind angemeldet</div>
+                </div>
+                <div class="box_content">
+                    <div class="defaultTpl">
+                        Willkommen {$userFirstName} {$userLastName}!<br/><br/>
+                        <a href="user/logout">Abmelden</a>
+                    </div>
+                </div>
+                <div class="box_footer"></div>
+            </div>
+        {else}
             <div class="box">
                 <div class="handler"></div>
                 <div class="box_header">
@@ -75,6 +91,7 @@
                 </div>
                 <div class="box_footer"></div>
             </div>
+        {/if}
         </div>
 
         <div id="content" class="content general_content">
