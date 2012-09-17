@@ -29,7 +29,7 @@ class Language {
             FROM %planguages WHERE langCode = %s', 
             $this->code
         );
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             $this->code = $q->getFirst()->langCode;
             $this->text = $q->getFirst()->langText;
         }
@@ -50,7 +50,7 @@ class Language {
     public static function cache() {
         $db = Database2::getInstance();
         $q = $db->q('SELECT * FROM %planguages ORDER BY langCode');
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             foreach ($q->getData() as $v) {
                 self::$languages[$v->langCode] = new Language($v->langCode, $v->langText);
             }

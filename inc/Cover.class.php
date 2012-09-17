@@ -40,7 +40,7 @@ class Cover {
             FROM %pcovers WHERE coverID = %i', 
             $this->id
         );
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             if ($image) {
                 $this->image = $q->getFirst()->coverImage;
             }

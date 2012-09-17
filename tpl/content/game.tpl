@@ -35,6 +35,19 @@
 {if $i->getPrice() > 0}{if $i@index > 0}, {/if}{$i->getPrice()}&euro; ({$i->getName()}){/if}
 {/foreach}
 </div>
+<div class="rating">
+<p>
+{section name="ratingLoop" start='1' step='1' loop='6'}
+{if $smarty.section.ratingLoop.index <= floor($rating)}
+<img src="res/ico/star_full.png" width="25" height="25" />
+{elseif $smarty.section.ratingLoop.index eq ceil($rating) && (floor($rating)) < $smarty.section.ratingLoop.index}
+<img src="res/ico/star_half.png" width="25" height="25" />
+{else}
+<img src="res/ico/star_empty.png" width="25" height="25" />
+{/if}
+{/section}
+</p>
+</div>
 </div>
 <p>&nbsp;</p>
 </div>

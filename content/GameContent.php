@@ -57,6 +57,10 @@ class GameContent implements ContentFileContent {
         $tpl->setMenu('game');
         $tpl->setTpl('content/game.tpl');
         $tpl->assignByRef('game', $game);
+
+        // Ermittle Ratings fuer das Spiel
+        $rating = Rating::getRatingForGame($game->getId());
+        $tpl->assign('rating', $rating->getData());
     }
 
     /**

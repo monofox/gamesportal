@@ -25,7 +25,7 @@ class Game {
             'SELECT * FROM %pgame WHERE gameID = %i', $this->id
         );
 
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             $this->title = $q->getFirst()->gameTitle;
             $this->desc = $q->getFirst()->gameDescription;
             $this->features = $q->getFirst()->gameFeatures;
@@ -51,7 +51,7 @@ class Game {
             'SELECT * FROM %pgame_lang WHERE gameID = %i', $this->id
         );
 
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             foreach ($q->getData() as $v) {
                 $lang = Language::getLangByCode($v->langCode);
                 if ($lang !== false) {
@@ -68,7 +68,7 @@ class Game {
             WHERE gameID = %i', $this->id
         );
 
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             foreach ($q->getData() as $v) {
                 $platform = new GamePlatform($v->gameID, $v->platID);
                 if ($platform->getType() == GamePlatform::TYPE_PLATFORM) {
@@ -151,7 +151,13 @@ class Game {
     public static function searchGames($searchTerm) {
         $db = Database2::getInstance();
         $sh = new StatusHandler();
-        $list = explode('+', $searchTerm);
+        $list = explode(' ', $searchTerm);
+        foreach ($list as $k => $v ) {
+            $vTemp = trim($v);
+            if (empty($v)) {
+                unset($list[$k]);
+            }
+        }
 
         $args = array();
         $sql = 'SELECT g.gameID FROM %pgame g JOIN %pgame_platform p ON g.gameID = p.gameID 

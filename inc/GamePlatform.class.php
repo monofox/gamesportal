@@ -44,7 +44,7 @@ class GamePlatform {
             WHERE g.gameID = %i AND g.platID = %i', 
             $this->gameId, $this->platId
         );
-        if ($q->hasData() > 0) {
+        if ($q->hasData()) {
             $this->name = $q->getFirst()->platName;
             $this->price = $q->getFirst()->gamePrice;
             $this->publishDate = $q->getFirst()->publishDate;

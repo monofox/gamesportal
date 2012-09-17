@@ -357,7 +357,7 @@ class Database2 {
                             $tagCount++;
                             break;
                         }
-                        $args[$tagCount] = $this->prepare($args[$tagCount]);
+                        $args[$tagCount] = $this->prepare($args[$tagCount], ($like > -1 ? true : false));
                         $beforeTag = substr($statement, $nextTag - 1, 1);
                         //Are there still quotation marks?
                         if (isset($like) && $like == 2) {
