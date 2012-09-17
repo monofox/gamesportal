@@ -421,7 +421,7 @@ class Main {
         } else if (strstr($class_name, 'AdminContent')) {
             $load = 'content/admin/' . $class_name . '.php';
         } else if (substr($class_name, count($class_name) - 8) == 'Content' && $class_name != 'Content') {
-            $load = 'content/' . $class_name . '.php';
+            $load = 'content/' . $class_name . '.inc.php';
         } else if ($class_name == 'Smarty') {
             $load = 'inc/smarty/' . $class_name . '.class.php';
         } else if (substr($class_name, 0, 7) == 'Smarty_') {

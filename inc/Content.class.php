@@ -280,18 +280,16 @@ class Content implements Listener {
         $tpl = Smarty_FLS::getInstance();
         $user = User::getInstance();
 
-        $cClassFile = 'content/'.ucfirst($url[0]) . 'Content.php';
         $cClass     = ucfirst($url[0]) . 'Content';
 
-        if (file_exists($cClassFile)) {
-            include_once $cClassFile;
+        try {
             $controller = new $cClass();
             if (!$controller->preExecute($user, $url)) {
                 $this->showError(500);
             } else {
                 $controller->execute($tpl, $this, $user, $url);
             }
-        } else {
+        } catch(Exception $e) {
             $this->showError(404);
         }
         $tpl->writeToTpl();
@@ -417,7 +415,6 @@ class Content implements Listener {
      * @return string cleaned string
      */
     public static function strip_javascript($filter) {
-        ;
         //var_dump(preg_match_all('/<script type="text\/javascript"(.*)>(.*)<\/script>/i', $filter, &$matches));
         $filter = preg_replace('/<script (.*)type="text\/javascript"(.*)>([^\/]*)<\/script>/i', '', $filter);
 

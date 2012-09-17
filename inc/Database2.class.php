@@ -395,7 +395,7 @@ class Database2 {
                         $operator = substr($statement, $nextTag - 3, 3);
                         $operator = trim($operator);
                         switch ($operator) {
-                            case '=':
+                            case '==':
                             case '<=':
                             case '>=':
                                 $operator = ' IS ';

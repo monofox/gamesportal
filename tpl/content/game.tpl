@@ -48,6 +48,45 @@
 {/section}
 </p>
 </div>
+<br class="clear" />
+<h3>Kommentare</h3>
+{if $loggedin}
+<div class="comment">
+<form action="game/{$game->getId()}-{$game->getShortName()}" method="post" class="modern_form">
+<fieldset>
+    <div class="leftbar">
+        <label>Bewertung</label>
+    </div>
+    <div class="rightbar">
+        <input type="radio" name="rating" value="0" checked="checked" /> nicht bewerten
+        <input type="radio" name="rating" value="1" /> 1
+        <input type="radio" name="rating" value="2" /> 2 
+        <input type="radio" name="rating" value="3" /> 3
+        <input type="radio" name="rating" value="4" /> 4
+        <input type="radio" name="rating" value="5" /> 5
+    </div>
+    <div class="leftbar">
+        <label id="comment">Kommentar (optional)</label>
+    </div>
+    <div class="rightbar">
+        <textarea name="comment" id="comment"></textarea>
+    </div>
+    <div class="rightbar">
+        <input type="submit" name="saveComment" value="Absenden" />
+    </div>
+</fieldset>
+</form>
+</div>
+{/if}
+<div class="commentList">
+<ul>
+{foreach from=$comments key='k' item='i'}
+<li><strong>{$i->getUser()->getName()} schrieb am {$i->getDatetime()}:</strong><br />
+{$i->getComment()}
+</li>
+{/foreach}
+</ul>
+</div>
 </div>
 <p>&nbsp;</p>
 </div>

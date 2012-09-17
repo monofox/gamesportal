@@ -39,6 +39,14 @@
                         <a href="games" class="menu_item {if $content.mnu eq "game"}menu_selected{/if}">Spiele</a>
                     </div>
                     <div class="menu_item_split"></div>
+                    <div class="menu_main_point">
+                        <a href="popgames" class="menu_item {if $content.mnu eq "popgame"}menu_selected{/if}">Beliebteste Spiele</a>
+                    </div>
+                    <div class="menu_item_split"></div>
+                    <div class="menu_main_point">
+                        <a href="popgamescon" class="menu_item {if $content.mnu eq "popgamecon"}menu_selected{/if}">Beliebteste Spiele je Konsole</a>
+                    </div>
+                    <div class="menu_item_split"></div>
             </div>
         </div>
         <div id="info-bar">

@@ -237,6 +237,28 @@ class Game {
         return $sh;
     }
 
+    public static function getPopularList() {
+        $sh = new StatusHandler(true);
+        $db = Database2::getInstance();
+        // You can easily add new conditions to this.
+        $q = $db->q(
+            'SELECT g.gameID, AVG(r.rating) as rating 
+            FROM %pgame g    
+            LEFT JOIN %prating r ON g.gameID = r.gameId
+            GROUP BY g.gameID 
+            ORDER BY AVG(rating) DESC');
+        if ($q->hasData()) {
+            foreach ($q->getData() as $k => $v) {
+                $sh->addData(new Game($v->gameID));
+            }
+        } else {
+            $sh->setStatus(false);
+            $sh->addInfo('Keine Spiele vorhanden.');
+        }
+
+        return $sh;
+    }
+
     public static function getList() {
         $sh = new StatusHandler(true);
         $db = Database2::getInstance();

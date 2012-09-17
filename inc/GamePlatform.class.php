@@ -23,6 +23,10 @@ class GamePlatform {
     public function getName() {
         return $this->name;
     }
+    
+    public function getShortName() {
+        return str_replace(array('@', ':', ';'), '', str_replace(' ', '-', strtolower($this->title)));
+    }
 
     public function getPrice() {
         return $this->price;

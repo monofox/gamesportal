@@ -8,10 +8,6 @@ RewriteCond %{REQUEST_URI} /configs/ [OR]
 RewriteCond %{REQUEST_URI} /tpl/
 RewriteRule ^(.*)$ index.php?url=$1&%{QUERY_STRING} [NC,L]
 
-# Rewrite always the files.
-RewriteCond %{REQUEST_URI} /files/
-RewriteRule ^(.*)$ index.php?url=$1&%{QUERY_STRING} [NC,L]
-
 # Don't disable all valid files and directories
 RewriteCond %{REQUEST_FILENAME} -d [OR] 
 RewriteCond %{REQUEST_FILENAME} -f 
