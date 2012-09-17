@@ -41,6 +41,10 @@ class GamePlatform {
         return $this->type;
     }
 
+    public static function loadGameList() {
+        
+    }
+
     public function load() {
         $db = Database2::getInstance();
         $q = $db->q(

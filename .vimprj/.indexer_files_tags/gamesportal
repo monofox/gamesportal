@@ -9334,6 +9334,7 @@ loadConfiguration	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Confi
 loadFiles	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^    public static function loadFiles($class_name) {$/;"	f
 loadFilter	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatebase.php	/^    public function loadFilter($type, $name)$/;"	f
 loadGame	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    public function loadGame($detail = true) {$/;"	f
+loadGameList	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    public static function loadGameList() {$/;"	f
 loadLanguages	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    private function loadLanguages() {$/;"	f
 loadPlatforms	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    private function loadPlatforms() {$/;"	f
 loadPlugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^    public function loadPlugin($plugin_name, $check = true)$/;"	f
