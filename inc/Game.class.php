@@ -165,61 +165,21 @@ class Game {
         $i = 0;
         foreach ($list as $v) {
             if ($i > 0) {
-                $sql .= ' AND';
+                $sql .= ') OR (';
             }
-            $sql .= ' g.gameTitle LIKE %l';
-            $args[] = $v;
-            $i++;
-        }
-        $sql .= ') OR (';
-        $i = 0;
-        foreach ($list as $v) {
-            if ($i > 0) {
-                $sql .= ' AND';
+            $i = 0;
+            foreach (
+                array(
+                    'g.gameTitle', 'g.gameDescription', 'g.gameFeatures', 'g.gameUSK', 'p.gamePrice', 'gp.platName'
+                ) as $k
+            ) {
+                if ($i > 0) {
+                    $sql .= ' OR';
+                }
+                $sql .= ' '. $k .' LIKE %l';
+                $args[] = $v;
+                $i++;
             }
-            $sql .= ' g.gameDescription LIKE %l';
-            $args[] = $v;
-            $i++;
-        }
-        $sql .= ') OR (';
-        $i = 0;
-        foreach ($list as $v) {
-            if ($i > 0) {
-                $sql .= ' AND';
-            }
-            $sql .= ' g.gameFeatures LIKE %l';
-            $args[] = $v;
-            $i++;
-        }
-        $sql .= ') OR (';
-        $i = 0;
-        foreach ($list as $v) {
-            if ($i > 0) {
-                $sql .= ' AND';
-            }
-            $sql .= ' g.gameUSK LIKE %l';
-            $args[] = $v;
-            $i++;
-        }
-        $sql .= ') OR (';
-        $i = 0;
-        foreach ($list as $v) {
-            if ($i > 0) {
-                $sql .= ' AND';
-            }
-            $sql .= ' p.gamePrice LIKE %l';
-            $args[] = $v;
-            $i++;
-        }
-        $sql .= ') OR (';
-        $i = 0;
-        foreach ($list as $v) {
-            if ($i > 0) {
-                $sql .= ' AND';
-            }
-            $sql .= ' gp.platName LIKE %l';
-            $args[] = $v;
-            $i++;
         }
         $sql .= ') GROUP BY g.gameID';
 
@@ -250,6 +210,33 @@ class Game {
         if ($q->hasData()) {
             foreach ($q->getData() as $k => $v) {
                 $sh->addData(new Game($v->gameID));
+            }
+        } else {
+            $sh->setStatus(false);
+            $sh->addInfo('Keine Spiele vorhanden.');
+        }
+
+        return $sh;
+    }
+
+    public static function getPopularListByConsole($console) {
+        $sh = new StatusHandler(true);
+        $db = Database2::getInstance();
+        // You can easily add new conditions to this.
+        $q = $db->q(
+            'SELECT g.gameID, p.platName, AVG(r.rating) as rating 
+            FROM %pgame g    
+            LEFT JOIN %prating r ON g.gameID = r.gameId
+            JOIN %pgame_platform gp ON gp.gameID = g.gameID
+            JOIN %pplatforms p ON gp.platID = p.platID
+            WHERE p.platID = %i
+            GROUP BY g.gameID, p.platName
+            ORDER BY AVG(rating) DESC', $console);
+        if ($q->hasData()) {
+            $sh->addData($q->getFirst()->platName, 'platName');
+            $sh->addData(array(), 'games');
+            foreach ($q->getData() as $k => $v) {
+                $sh->addData(new Game($v->gameID), 'games');
             }
         } else {
             $sh->setStatus(false);

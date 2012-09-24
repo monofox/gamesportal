@@ -47,6 +47,10 @@
                         <a href="popgamescon" class="menu_item {if $content.mnu eq "popgamecon"}menu_selected{/if}">Beliebteste Spiele je Konsole</a>
                     </div>
                     <div class="menu_item_split"></div>
+                    <div class="menu_main_point">
+                        <a href="guestbook" class="menu_item {if $content.mnu eq "guestbook"}menu_selected{/if}">Gästebuch</a>
+                    </div>
+                    <div class="menu_item_split"></div>
             </div>
         </div>
         <div id="info-bar">

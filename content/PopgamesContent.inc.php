@@ -38,13 +38,25 @@ class PopgamesContent implements ContentFileContent {
      */
     public function execute($tpl, $content, $user, $url) {
         Language::cache();
-        $gamelist = Game::getPopularList();
+        $console = null;
+        if (isset($url[1]) && is_numeric($url[1])) {
+            $console = $url[1];
+            $gamelist = Game::getPopularListByConsole($console);
+        } else {
+            $gamelist = Game::getPopularList();
+        }
+
         StatusHandler::messagesMerge($gamelist);
 
-        $tpl->setHeading('Beliebteste Spiele');
+        if ($console != null && $gamelist->getStatus()) {
+            $tpl->setHeading('Beliebteste Spiele für Plattform "' . $gamelist->getData()['platName'] . '"');
+            $tpl->assign('games', $gamelist->getData()['games']);
+        } else {
+            $tpl->setHeading('Beliebteste Spiele');
+            $tpl->assign('games', $gamelist->getData());
+        }
         $tpl->setMenu('popgame');
         $tpl->setTpl('content/gamelist.tpl');
-        $tpl->assign('games', $gamelist->getData());
     }
 
     /**

@@ -20,6 +20,7 @@ Game	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^class Game {$/;"	c
 GameContent	/srv/www/htdocs/schule/gamesportal/content/GameContent.inc.php	/^class GameContent implements ContentFileContent {$/;"	c
 GamePlatform	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^class GamePlatform {$/;"	c
 GamesContent	/srv/www/htdocs/schule/gamesportal/content/GamesContent.inc.php	/^class GamesContent implements ContentFileContent {$/;"	c
+GuestbookContent	/srv/www/htdocs/schule/gamesportal/content/Guestbook.inc.php	/^class GuestbookContent implements ContentFileContent {$/;"	c
 HomeContent	/srv/www/htdocs/schule/gamesportal/content/HomeContent.inc.php	/^class HomeContent implements ContentFileContent {$/;"	c
 ItemVarName	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_compile_foreach.php	/^        $ItemVarName = '$' . trim($item, '\\'"') . '@';$/;"	v
 Language	/srv/www/htdocs/schule/gamesportal/inc/Language.class.php	/^class Language {$/;"	c
@@ -490,6 +491,7 @@ _flag	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_c
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['errormsg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['infomsg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['succmsg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
+_from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/bd8817ce1d398fd3484aa38c7065e03112eccbc0.file.conlist.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['platforms']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/d8bcb948a643037e18d3f9f6a8ae787fc91a2094.file.game.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['comments']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/d8bcb948a643037e18d3f9f6a8ae787fc91a2094.file.game.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['game']->value->getCompats(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/d8bcb948a643037e18d3f9f6a8ae787fc91a2094.file.game.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['game']->value->getLanguages(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
@@ -1118,6 +1120,7 @@ _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_
 _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_time.php	/^            $_val = sprintf('%02d', $i);$/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/33239c84de49b23b7fa2dd5fded24dcd2c7ab90c.file.index.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
+_valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/bd8817ce1d398fd3484aa38c7065e03112eccbc0.file.conlist.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/c6b2c89853c96e0b9a9bc209d3c3f51e9525ed10.file.header.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/d8bcb948a643037e18d3f9f6a8ae787fc91a2094.file.game.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/fa5ed419c936b6f6bdfef3b661184b41e509f5c8.file.gamelist.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
@@ -1576,6 +1579,8 @@ config_vars	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_inte
 config_vars	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatebase.php	/^            $config_vars = $parent_ptr->config_vars;$/;"	v
 connectionId	/srv/www/htdocs/schule/gamesportal/inc/Database2.class.php	/^        $this->connectionId = mysqli_connect($sqlserver, $sqluser, $sqlpassword, $database) or$/;"	v
 connectionId	/srv/www/htdocs/schule/gamesportal/inc/Database2.class.php	/^    private $connectionId;$/;"	v
+console	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^            $console = $url[1];$/;"	v
+console	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^        $console = null;$/;"	v
 content	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^            $content = Content::getInstance();$/;"	v
 content	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^        $content = new Content();$/;"	v
 content	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.fetch.php	/^                $content = $csplit[1];$/;"	v
@@ -1680,6 +1685,7 @@ db	/srv/www/htdocs/schule/gamesportal/inc/Cover.class.php	/^        $db = Databa
 db	/srv/www/htdocs/schule/gamesportal/inc/DbStatusHandler.class.php	/^        $this->db = $db;$/;"	v
 db	/srv/www/htdocs/schule/gamesportal/inc/DbStatusHandler.class.php	/^    private $db;$/;"	v
 db	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^        $db = Database2::getInstance();$/;"	v
+db	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^        $db = Database2::getInstance();                            $/;"	v
 db	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^        $db = Database2::getInstance();$/;"	v
 db	/srv/www/htdocs/schule/gamesportal/inc/Language.class.php	/^        $db = Database2::getInstance();$/;"	v
 db	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^        $db = Database2::getInstance();$/;"	v
@@ -1853,6 +1859,7 @@ execute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.php	/^
 execute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/GameContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/GamesContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
+execute	/srv/www/htdocs/schule/gamesportal/content/Guestbook.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/HomeContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
@@ -1993,8 +2000,8 @@ gameId	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    priva
 gameId	/srv/www/htdocs/schule/gamesportal/inc/Rating.class.php	/^        $this->gameId = $gameId;$/;"	v
 gameId	/srv/www/htdocs/schule/gamesportal/inc/Rating.class.php	/^    private $gameId;$/;"	v
 gamelist	/srv/www/htdocs/schule/gamesportal/content/GamesContent.inc.php	/^        $gamelist = Game::getList();$/;"	v
-gamelist	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^        $gamelist = Game::getPopularList();$/;"	v
-gamelist	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^        $gamelist = Game::getPopularList();$/;"	v
+gamelist	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^            $gamelist = Game::getPopularList();$/;"	v
+gamelist	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^            $gamelist = Game::getPopularListByConsole($console);$/;"	v
 generateHeader	/srv/www/htdocs/schule/gamesportal/inc/SaltEncryption.class.php	/^    private function generateHeader() {$/;"	f
 generateSalt	/srv/www/htdocs/schule/gamesportal/inc/SaltEncryption.class.php	/^    private function generateSalt() {$/;"	f
 generates	/srv/www/htdocs/schule/gamesportal/inc/SaltEncryption.class.php	/^     * This function generates and returns a more secure hash of a password.$/;"	f
@@ -2100,10 +2107,12 @@ getNumFields	/srv/www/htdocs/schule/gamesportal/inc/Result.class.php	/^    publi
 getNumRows	/srv/www/htdocs/schule/gamesportal/inc/DbStatusHandler.class.php	/^    public function getNumRows() {$/;"	f
 getNumRows	/srv/www/htdocs/schule/gamesportal/inc/Result.class.php	/^    public function getNumRows() {$/;"	f
 getPlatforms	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    public function getPlatforms() {$/;"	f
+getPlatforms	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    public static function getPlatforms() {$/;"	f
 getPlugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatecompilerbase.php	/^    public function getPlugin($plugin_name, $plugin_type)$/;"	f
 getPluginFromDefaultHandler	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatecompilerbase.php	/^    public function getPluginFromDefaultHandler($tag, $plugin_type)$/;"	f
 getPluginsDir	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^    public function getPluginsDir()$/;"	f
 getPopularList	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    public static function getPopularList() {$/;"	f
+getPopularListByConsole	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    public static function getPopularListByConsole($console) {$/;"	f
 getPrice	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    public function getPrice() {$/;"	f
 getPublishDate	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    public function getPublishDate($format = 'd.m.Y') {$/;"	f
 getQueryNumber	/srv/www/htdocs/schule/gamesportal/inc/Database2.class.php	/^    public function getQueryNumber() {$/;"	f
@@ -2218,6 +2227,7 @@ hour_format	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_
 hour_id	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_time.php	/^    $hour_id = null;$/;"	v
 hour_size	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_time.php	/^    $hour_size = null;$/;"	v
 hour_value_format	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_time.php	/^    $hour_value_format = '%02d';$/;"	v
+i	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^            $i = 0;$/;"	v
 i	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^        $i = 0;$/;"	v
 i	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^                    $i = -1;$/;"	v
 i	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^            $i = 0;$/;"	v
@@ -9334,7 +9344,6 @@ loadConfiguration	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Confi
 loadFiles	/srv/www/htdocs/schule/gamesportal/inc/Main.class.php	/^    public static function loadFiles($class_name) {$/;"	f
 loadFilter	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatebase.php	/^    public function loadFilter($type, $name)$/;"	f
 loadGame	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    public function loadGame($detail = true) {$/;"	f
-loadGameList	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    public static function loadGameList() {$/;"	f
 loadLanguages	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    private function loadLanguages() {$/;"	f
 loadPlatforms	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    private function loadPlatforms() {$/;"	f
 loadPlugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^    public function loadPlugin($plugin_name, $check = true)$/;"	f
@@ -9823,6 +9832,7 @@ platId	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^        $
 platId	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^    private $platId;$/;"	v
 platform	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^                $platform = new GamePlatform($v->gameID, $v->platID);$/;"	v
 platforms	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^    private $platforms = array();$/;"	v
+platlist	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^        $platlist = GamePlatform::getPlatforms();$/;"	v
 plugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^     * @param string $plugin_name    class plugin name to load$/;"	c
 plugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.config_load.php	/^ * Smarty {config_load} function plugin$/;"	f
 plugin	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.counter.php	/^ * Smarty {counter} function plugin$/;"	f
@@ -9897,6 +9907,7 @@ postExecute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.ph
 postExecute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/GameContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/GamesContent.inc.php	/^    public function postExecute($content) {$/;"	f
+postExecute	/srv/www/htdocs/schule/gamesportal/content/Guestbook.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/HomeContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^    public function postExecute($content) {$/;"	f
@@ -9906,6 +9917,7 @@ preExecute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.php
 preExecute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/GameContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/GamesContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
+preExecute	/srv/www/htdocs/schule/gamesportal/content/Guestbook.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/HomeContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
@@ -10051,6 +10063,7 @@ q	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^        $q = $db->q($/
 q	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^        $q = $db->q($sql, $args);$/;"	v
 q	/srv/www/htdocs/schule/gamesportal/inc/Game.class.php	/^        $q = $db->q('SELECT gameID FROM %pgame');$/;"	v
 q	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^        $q = $db->q($/;"	v
+q	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.class.php	/^        $q = $db->q('SELECT * FROM %pplatforms ORDER BY platName');$/;"	v
 q	/srv/www/htdocs/schule/gamesportal/inc/Language.class.php	/^        $q = $db->q($/;"	v
 q	/srv/www/htdocs/schule/gamesportal/inc/Language.class.php	/^        $q = $db->q('SELECT * FROM %planguages ORDER BY langCode');$/;"	v
 q	/srv/www/htdocs/schule/gamesportal/inc/Rating.class.php	/^            $q = $db->q($/;"	v

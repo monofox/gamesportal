@@ -422,7 +422,11 @@ class StatusHandler {
         if (is_null($k) || is_double($k)) {
             $this->data[] = $da;
         } else {
-            $this->data[$k] = $da;
+            if (isset($this->data[$k]) && is_array($this->data[$k])) {
+                $this->data[$k][] = $da;
+            } else {
+                $this->data[$k] = $da;
+            }
         }
     }
 

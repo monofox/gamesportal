@@ -12,7 +12,7 @@
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
  * @link      https://trac.fls-wiesbaden.de/browser/flshp/trunk/content/VPlanContent.php
  */
-class PopgamesconContent implements ContentFileContent {
+class GuestbookContent implements ContentFileContent {
 
     /**
      * executes pre conditions.
@@ -37,16 +37,10 @@ class PopgamesconContent implements ContentFileContent {
      * @return void
      */
     public function execute($tpl, $content, $user, $url) {
-        Language::cache();
-        $platlist = GamePlatform::getPlatforms();
-        if (!$platlist->hasData()) {
-            StatusHandler::getInstance()->addInfo('Es existieren keine Plattformen.');
-        }
-
-        $tpl->setHeading('Beliebteste Spiele je Konsole');
-        $tpl->setMenu('popgamecon');
-        $tpl->setTpl('content/conlist.tpl');
-        $tpl->assign('platforms', $platlist->getData());
+        $tpl->setHeading('Gästebuch');
+        $tpl->setMenu('guestbook');
+        $tpl->setTpl('content/guestbook.tpl');
+        $tpl->assign('nothing', 'nope');
     }
 
     /**

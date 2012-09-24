@@ -17,7 +17,9 @@ class GamePlatform {
         $this->platId = $platId;
         $this->type   = self::TYPE_PLATFORM;
 
-        $this->load();
+        if ($gameId != null && $platId != null) {
+            $this->load();
+        }
     }                      
 
     public function getName() {
@@ -41,8 +43,11 @@ class GamePlatform {
         return $this->type;
     }
 
-    public static function loadGameList() {
-        
+    public static function getPlatforms() {
+        $db = Database2::getInstance();                            
+        $q = $db->q('SELECT * FROM %pplatforms ORDER BY platName');
+
+        return $q;
     }
 
     public function load() {
