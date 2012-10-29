@@ -51,6 +51,16 @@
                         <a href="guestbook" class="menu_item {if $content.mnu eq "guestbook"}menu_selected{/if}">Gästebuch</a>
                     </div>
                     <div class="menu_item_split"></div>
+                    <div class="menu_main_point">
+                        <a href="#" class="menu_item">Administration</a>
+                        <div class="menu_submenu">
+                            <div>
+                                <a class="menu_item {if $content.mnu eq "admplatform"}menu_selected{/if}" href="admplatform">Plattform(en)</a>
+                                <a class="menu_item {if $content.mnu eq "admgames"}menu_selected{/if}" href="admgames">Spiele</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu_item_split"></div>
             </div>
         </div>
         <div id="info-bar">

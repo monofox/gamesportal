@@ -11,7 +11,7 @@
  * @version   0.1
  */
 
-require_once 'inc/Main.class.php';
+require_once 'inc/Main.inc.php';
 $main = new Main();
 $main->preInit();
 $main->init();
