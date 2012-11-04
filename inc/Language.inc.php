@@ -35,6 +35,14 @@ class Language {
         }
     }
 
+    public static function getLanguages() {
+        if (count(self::$languages) <= 0) {
+            self::cache();
+        }
+
+        return self::$languages;
+    }
+
     public static function getLangByCode($code) {
         if (count(self::$languages) <= 0) {
             self::cache();

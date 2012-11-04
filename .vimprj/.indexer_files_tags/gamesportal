@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+AdmgamesContent	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^class AdmgamesContent implements ContentFileContent {$/;"	c
 AdmplatformContent	/srv/www/htdocs/schule/gamesportal/content/AdmplatformContent.inc.php	/^class AdmplatformContent implements ContentFileContent {$/;"	c
 Configuration	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Configuration.inc.php	/^class Configuration {$/;"	c
 Content	/srv/www/htdocs/schule/gamesportal/inc/Content.inc.php	/^    public function Content() {$/;"	f
@@ -490,6 +491,9 @@ _filter_name	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_int
 _filter_name	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templatebase.php	/^        $_filter_name = $_plugin;$/;"	v
 _first	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_resource_extends.php	/^        $_first = reset($_components);$/;"	v
 _flag	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_config.php	/^        $_flag = (int) $this->smarty->config_read_hidden + (int) $this->smarty->config_booleanize * 2$/;"	v
+_from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/12eab9bf243f55c69b8561a1bb8ec0fbb33ce82c.file.games.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['games']->value->getData(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
+_from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/12eab9bf243f55c69b8561a1bb8ec0fbb33ce82c.file.games.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['languages']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
+_from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/12eab9bf243f55c69b8561a1bb8ec0fbb33ce82c.file.games.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['platforms']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/354f60af689b3b7c67d9d4f2aa6920d2ae88cb02.file.conlist.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['platforms']->value->getData(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['errormsg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
 _from	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^ $_from = $_smarty_tpl->tpl_vars['infomsg']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}$/;"	v
@@ -1122,6 +1126,7 @@ _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_options
 _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_radios.php	/^            $_val = isset($output[$_i]) ? $output[$_i] : '';$/;"	v
 _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_date.php	/^            $_val = sprintf('%02d', $i);$/;"	v
 _val	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_select_time.php	/^            $_val = sprintf('%02d', $i);$/;"	v
+_valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/12eab9bf243f55c69b8561a1bb8ec0fbb33ce82c.file.games.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/33239c84de49b23b7fa2dd5fded24dcd2c7ab90c.file.index.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/354f60af689b3b7c67d9d4f2aa6920d2ae88cb02.file.conlist.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
 _valid	/srv/www/htdocs/schule/gamesportal/inc/smarty/tpl_c/6a393857b126827d85bd5dde6c68f9173b2a2cd7.file.msg.tpl.php	/^$_valid = $_smarty_tpl->decodeProperties(array ($/;"	v
@@ -1649,6 +1654,7 @@ cycle_array	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.cycle
 cycle_vars	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.cycle.php	/^    static $cycle_vars;$/;"	v
 data	/srv/www/htdocs/schule/gamesportal/inc/Content.inc.php	/^    public function actionPerformed($action, $data = false) {$/;"	v
 data	/srv/www/htdocs/schule/gamesportal/inc/DbStatusHandler.inc.php	/^        $data = $this->getData();$/;"	v
+data	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^        $data = array();$/;"	v
 data	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Configuration.inc.php	/^        $data = array();$/;"	v
 data	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Section.inc.php	/^        $data = array();$/;"	v
 data	/srv/www/htdocs/schule/gamesportal/inc/Listenable.inc.php	/^    public function fireEvent($event, $data = false) {$/;"	v
@@ -1741,6 +1747,7 @@ defines	/srv/www/htdocs/schule/gamesportal/inc/Listener.inc.php	/^ * this interf
 defines	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_data.php	/^ * This class defines an object for undefined variable handling$/;"	c
 defines	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_data.php	/^ * This class defines the Smarty variable object$/;"	c
 definition	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_compile_function.php	/^         \/\/ remove last line break from function definition$/;"	f
+delete	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function delete() {$/;"	f
 delete	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.inc.php	/^    public function delete() {$/;"	f
 delete	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_cacheresource_custom.php	/^    protected abstract function delete($name, $cache_id, $compile_id, $exp_time);$/;"	f
 delete	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php	/^    protected abstract function delete(array $keys);$/;"	f
@@ -1882,6 +1889,7 @@ escape_html	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^   
 escape_start_tag	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_templateparser.php	/^    public static function escape_start_tag($tag_text) {$/;"	f
 escaped_string	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_configfileparser.php	/^        $escaped_string = substr($qstr, 1, strlen($qstr)-2); \/\/remove outer quotes$/;"	v
 escapes_single	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_configfileparser.php	/^    private static $escapes_single = Array('\\\\' => '\\\\',$/;"	v
+execute	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/AdmplatformContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.php	/^    public function execute($tpl, $content, $user, $url);$/;"	f
 execute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function execute($tpl, $content, $user, $url) {$/;"	f
@@ -2022,6 +2030,7 @@ g:indexer_ctagsCommandLineOptions	/srv/www/htdocs/schule/gamesportal/.vimprj/con
 g:indexer_indexerListFilename	/srv/www/htdocs/schule/gamesportal/.vimprj/conf.vim	/^let g:indexer_indexerListFilename = g:sPathProject.'\/.indexer_files'$/;"	v
 g:indexer_projectsSettingsFilename	/srv/www/htdocs/schule/gamesportal/.vimprj/conf.vim	/^let g:indexer_projectsSettingsFilename = g:sPathProject.'\/vimproject'$/;"	v
 g:sPathProject	/srv/www/htdocs/schule/gamesportal/.vimprj/conf.vim	/^let g:sPathProject = expand('<sfile>:p:h')$/;"	v
+game	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^            $game = new Game($url[1]);$/;"	v
 game	/srv/www/htdocs/schule/gamesportal/content/GameContent.inc.php	/^        $game = new Game($urlsplit[0]);$/;"	v
 gameId	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.inc.php	/^        $this->gameId = $gameId;$/;"	v
 gameId	/srv/www/htdocs/schule/gamesportal/inc/GamePlatform.inc.php	/^    private $gameId;$/;"	v
@@ -2114,6 +2123,7 @@ getJsString	/srv/www/htdocs/schule/gamesportal/inc/StatusHandler.inc.php	/^    p
 getJsonString	/srv/www/htdocs/schule/gamesportal/inc/StatusHandler.inc.php	/^    public function getJsonString() {$/;"	f
 getLangByCode	/srv/www/htdocs/schule/gamesportal/inc/Language.inc.php	/^    public static function getLangByCode($code) {$/;"	f
 getLanguages	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function getLanguages() {$/;"	f
+getLanguages	/srv/www/htdocs/schule/gamesportal/inc/Language.inc.php	/^    public static function getLanguages() {$/;"	f
 getLastName	/srv/www/htdocs/schule/gamesportal/inc/User.inc.php	/^    public function getLastName() {$/;"	f
 getLastResult	/srv/www/htdocs/schule/gamesportal/inc/Database2.inc.php	/^    public function getLastResult() {$/;"	f
 getLastResults	/srv/www/htdocs/schule/gamesportal/inc/Database2.inc.php	/^    public function getLastResults() {$/;"	f
@@ -2121,6 +2131,8 @@ getLastStatement	/srv/www/htdocs/schule/gamesportal/inc/Database2.inc.php	/^    
 getLastStatements	/srv/www/htdocs/schule/gamesportal/inc/Database2.inc.php	/^    public function getLastStatements() {$/;"	f
 getLatestInvalidationTimestamp	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php	/^    protected function getLatestInvalidationTimestamp($cid, $resource_name = null, $cache_id = null, $compile_id = null, $resource_uid = null)$/;"	f
 getList	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public static function getList() {$/;"	f
+getListOfCompats	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function getListOfCompats() {$/;"	f
+getListOfPlatforms	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function getListOfPlatforms() {$/;"	f
 getMessage	/srv/www/htdocs/schule/gamesportal/inc/StatusHandler.inc.php	/^    public function getMessage($join = false) {$/;"	f
 getMetaTimestamp	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php	/^    protected function getMetaTimestamp(&$content)$/;"	f
 getName	/srv/www/htdocs/schule/gamesportal/inc/Cover.inc.php	/^    public function getName() {$/;"	f
@@ -8845,6 +8857,7 @@ loginName	/srv/www/htdocs/schule/gamesportal/inc/User.inc.php	/^    private $log
 logout	/srv/www/htdocs/schule/gamesportal/inc/User.inc.php	/^    public function logout() {$/;"	f
 loop	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_table.php	/^    $loop = null;$/;"	v
 loop_count	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.html_table.php	/^    $loop_count = count($loop);$/;"	v
+lsh	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^                $lsh = $game->saveGame();$/;"	v
 lsh	/srv/www/htdocs/schule/gamesportal/content/AdmplatformContent.inc.php	/^                $lsh = $platForm->changeName($_POST['platname']); $/;"	v
 m	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_cacheresource_keyvaluestore.php	/^        $m = unpack("N", substr($content, 4, 4));$/;"	v
 m	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_internal_configfileparser.php	/^    function __construct($s, $m = array())$/;"	v
@@ -9416,6 +9429,7 @@ populateTimestamp	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smart
 populateTimestamp	/srv/www/htdocs/schule/gamesportal/inc/smarty/sysplugins/smarty_resource.php	/^    public function populateTimestamp(Smarty_Template_Source $source)$/;"	f
 port	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.fetch.php	/^                $port = $uri_parts['port'];$/;"	v
 port	/srv/www/htdocs/schule/gamesportal/inc/smarty/plugins/function.fetch.php	/^                $port = 80;$/;"	v
+postExecute	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/AdmplatformContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.php	/^    public function postExecute($content); \/\/ for display errors, etc.$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function postExecute($content) {$/;"	f
@@ -9427,6 +9441,7 @@ postExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesContent.inc.php	/
 postExecute	/srv/www/htdocs/schule/gamesportal/content/PopgamesconContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/SearchContent.inc.php	/^    public function postExecute($content) {$/;"	f
 postExecute	/srv/www/htdocs/schule/gamesportal/content/UserContent.inc.php	/^    public function postExecute($content) {$/;"	f
+preExecute	/srv/www/htdocs/schule/gamesportal/content/AdmgamesContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/AdmplatformContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/ContentFileContent.inc.php	/^    public function preExecute($user, $url); \/\/ for checking rights, etc.$/;"	f
 preExecute	/srv/www/htdocs/schule/gamesportal/content/CoverContent.inc.php	/^    public function preExecute($user, $url) {$/;"	f
@@ -9998,9 +10013,11 @@ setInstance	/srv/www/htdocs/schule/gamesportal/inc/Smarty_FLS.inc.php	/^    publ
 setInstance	/srv/www/htdocs/schule/gamesportal/inc/StatusHandler.inc.php	/^    public static function setInstance(StatusHandler $sh = null) {$/;"	f
 setInstance	/srv/www/htdocs/schule/gamesportal/inc/User.inc.php	/^    public static function setInstance(User $instance = null) {$/;"	f
 setKeyActions	/srv/www/htdocs/schule/gamesportal/docs/html/search/search.js	/^function setKeyActions(elem,action)$/;"	f
+setLanguages	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function setLanguages(array $lang) {$/;"	f
 setMenu	/srv/www/htdocs/schule/gamesportal/inc/Smarty_FLS.inc.php	/^    public function setMenu($mnu = null) {$/;"	f
 setName	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Entry.inc.php	/^    public function setName($name) {$/;"	f
 setName	/srv/www/htdocs/schule/gamesportal/inc/Lib/Configuration/Section.inc.php	/^    public function setName($name) {$/;"	f
+setPlatforms	/srv/www/htdocs/schule/gamesportal/inc/Game.inc.php	/^    public function setPlatforms(array $plat) {$/;"	f
 setPluginsDir	/srv/www/htdocs/schule/gamesportal/inc/smarty/Smarty.class.php	/^    public function setPluginsDir($plugins_dir)$/;"	f
 setPrefix	/srv/www/htdocs/schule/gamesportal/inc/Database2.inc.php	/^    public function setPrefix($prefix) {$/;"	f
 setResult	/srv/www/htdocs/schule/gamesportal/inc/DbStatusHandler.inc.php	/^    public function setResult($resultId) {$/;"	f

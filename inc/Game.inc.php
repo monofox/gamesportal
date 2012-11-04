@@ -45,6 +45,30 @@ class Game {
         }
     }
 
+    public function delete() {
+        $db = Database2::getInstance();
+        $sh = new StatusHandler(true);
+
+        // Remove all ratings and comments
+        $sh->setStatus($sh->getStatus() && $db->q('DELETE FROM %prating WHERE gameID = %i', $this->id));
+        $sh->setStatus($sh->getStatus() && $db->q('DELETE FROM %pgame_lang WHERE gameID = %i', $this->id));
+        $sh->setStatus($sh->getStatus() && $db->q('DELETE FROM %pgame_platform WHERE gameID = %i', $this->id));
+        if ($this->cover->getId() != null) {
+            $sh->setStatus($sh->getStatus() && $db->q('DELETE FROM %pcovers WHERE coverID = %i', $this->cover->getId()));
+        }
+
+        // Now remove game itself:
+        $sh->setStatus($sh->getStatus() && $db->q('DELETE FROM %pgame WHERE gameID = %i', $this->id));
+
+        if ($sh->getStatus()) {
+            $sh->addSuccess('Bewertungen, Kommentare und Spiel erfolgreich entfernt.');
+        } else {
+            $sh->addError('Leider konnte nicht alles erfolgreich entfernt werden.');
+        }
+
+        return $sh;
+    }
+
     private function loadLanguages() {
         $db = Database2::getInstance();
         $q = $db->q(
@@ -96,17 +120,61 @@ class Game {
         return $this->features;
     }
 
+    public function setLanguages(array $lang) {
+        $db = Database2::getInstance();
+        $db->q('DELETE FROM %pgame_lang WHERE gameID = %i', $this->id);
+        $sh = new StatusHandler(true);
+
+        foreach ($lang as $k) {
+            $sh->setStatus($sh->getStatus() && $db->q('INSERT INTO %pgame_lang VALUES (%i, %s)', $this->id, $v));
+        }
+
+        return $sh;
+    }
+
     public function getLanguages() {
         return $this->languages;
+    }
+
+    public function setPlatforms(array $plat) {
+        $db = Database2::getInstance();
+        $db->q('DELETE FROM %pgame_platform WHERE gameID = %i', $this->id);
+        $sh = new StatusHandler();
+
+        foreach ($plat as $k) {
+            $sh->setStatus(
+                $sh->getStatus() && $db->q(
+                    'INSERT INTO %pgame_platform '
+                )
+            );
+        }
     }
 
     public function getPlatforms() {
         return $this->platforms;
     }
 
+    public function getListOfPlatforms() {
+        $data = array();
+        foreach ($this->getPlatforms() as $v) {
+            $data[] = $v->getPlatId();
+        }
+
+        return $data;
+    }
+
     public function getCompats() {
         return $this->compats;
     }
+ 
+    public function getListOfCompats() {
+        $data = array();
+        foreach ($this->getCompats() as $v) {
+            $data[] = $v->getPlatId();
+        }
+
+        return $data;
+    } 
 
     public function getUSK() {
         return $this->usk;
@@ -137,8 +205,9 @@ class Game {
             gameCover = %i,
             gameFeatures = %s
             WHERE gameID = %i',
-            $this->desc, $this->usk, $this->title, $this->cover, $this->features, $this->id
+            $this->desc, $this->usk, $this->title, $this->cover->getId(), $this->features, $this->id
         );
+
         if ($q->getStatus()) {
             $q->addSuccess('Spiel erfolgreich gespeichert.');
         } else {
