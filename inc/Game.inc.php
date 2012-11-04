@@ -1,6 +1,19 @@
 <?php
 use \FLS\Lib\Configuration\Configuration as Configuration;
 
+/**
+ * Game,
+ * manages the game itself
+ *
+ * PHP Version 5.3
+ *
+ * @date      04.11.2012
+ * @version   2.3 Class documentated
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
+ */
 class Game {
     private $title;
     private $desc;

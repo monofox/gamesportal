@@ -1,20 +1,7 @@
 <?php
 
 /**
- * Handles the connection to MySQL
- *
- * PHP Version 5.3
- *
- * @package    FLS
- * @subpackage System
- * @author     Website-Team <website-team@fls-wiesbaden.de>
- * @copyright  2012-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license    GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link       https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/Database2.class.php
- */
-// maybe includes in future.
-
-/**
+ * Database2
  * Handles the connection to MySQL
  *
  * @package    FLS

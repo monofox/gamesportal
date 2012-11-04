@@ -1,19 +1,6 @@
 <?php
 
 /**
- * This file deinfes the listener interface.
- *
- * PHP Version 5.3
- *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/Listener.class.php
- */
-// maybe includes in future.
-
-/**
  * Listener
  * this interface defines the listener classes.
  *

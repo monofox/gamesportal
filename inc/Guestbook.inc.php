@@ -1,4 +1,18 @@
 <?php
+
+/**
+ * GuestbookPlatform,
+ * manages the guestbook itself
+ *
+ * PHP Version 5.3
+ *
+ * @date      04.11.2012
+ * @version   1.0 Class documentated
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
+ */
 class Guestbook {
 
     /**
@@ -42,6 +56,14 @@ class Guestbook {
         return $number;
     }
 
+    /**
+     * Create guestbook entry!
+     *
+     * @param string $name    The name of the commentator
+     * @param string $comment The comment of the user
+     *
+     * @return StatusHandler
+     */
     public function create($name, $comment) {
         $sh = new StatusHandler();
         $name = trim($name);

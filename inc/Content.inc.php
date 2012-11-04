@@ -1,32 +1,19 @@
 <?php
 
-/**
- * Content,
- * manages the whole content, whether php or from databse: its all here ;-)
- *
- * PHP Version 5.3
- *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/Content.class.php
- */
 use \FLS\Lib\Configuration\Configuration as Configuration;
 
-// maybe includes in future.
-
 /**
  * Content,
  * manages the whole content, whether php or from databse: its all here ;-)
  *
  * PHP Version 5.3
  *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
+ * @date      04.11.2012
+ * @version   3.5 Class documentated
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/Content.class.php
  */
 class Content implements Listener {
     

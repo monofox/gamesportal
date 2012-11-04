@@ -1,16 +1,16 @@
 <?php
 
 /**
- * DefaultMobileContent
- * controls the default mobile page
+ * PopgamesMobileContent
+ * displays the popular games
  *
  * PHP Version 5.3
  *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
+ * @date      2.0 Implemented popular list by console
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browser/flshp/trunk/content/VPlanContent.php
  */
 class PopgamesContent implements ContentFileContent {
 

@@ -1,41 +1,27 @@
 <?php
 
 /**
- * This file controls nothing. nada. don't look. It can be very, very 
- * disappointing for you. Because it's only an interface. No implementation ;-)
- *
- * PHP Version 5.3
- *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browser/flshp/trunk/content/ContentFileContent.php
- */
-
-// maybe includes in future.
-
-/**
  * ContentFileContent
  * has the force over the other content files ;-)
- * The Name of this class is a little bit confusing, but it is needed that content is at the end od the name,
- * because auto_load don't wok otherwise.
+ * The Name of this class is a little bit confusing, but it is needed that content is at the end of the name,
+ * because auto_load don't work otherwise.
  *
  * PHP Version 5.3
  *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
+ * @date      04.11.2012 
+ * @version   1.0 Created class.
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browser/flshp/trunk/content/ContentFileContent.php
  */
 interface ContentFileContent {
 
     /**
      * executes pre conditions.
      *
-     * @param User            $user  User object
-     * @param array           $url   URL.
+     * @param User  $user User object
+     * @param array $url  URL.
      *
      * @return boolean
      */
@@ -44,10 +30,10 @@ interface ContentFileContent {
     /**
      * executes the main process for display the module.
      *
-     * @param Smarty_FLS      $tpl     Smarty template object
-     * @param Content         $content Content object
-     * @param User            $user    User object
-     * @param array           $url     URL.
+     * @param Smarty_FLS $tpl     Smarty template object
+     * @param Content    $content Content object
+     * @param User       $user    User object
+     * @param array      $url     URL.
      *
      * @return void
      */

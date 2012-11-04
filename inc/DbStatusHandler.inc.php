@@ -1,20 +1,6 @@
 <?php
 
 /**
- * Wrapper of the resultId from DB Requests
- *
- * PHP Version 5.3
- *
- * @package    FLS
- * @subpackage System
- * @author     Website-Team <website-team@fls-wiesbaden.de>
- * @copyright  2012-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license    GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link       https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/DbStatusHandler.class.php
- */
-// maybe includes in future.
-
-/**
  * DbStatusHandler
  * Wrapper of the resultId from DB Requests
  *

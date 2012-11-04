@@ -1,19 +1,4 @@
 <?php
-/**
- * StatusHandler,
- * manages the status and helps by returning objects with specific
- * informations such as info, success, error messages and data.
- *
- * PHP Version 5.3
- *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/StatusHandler.class.php
- */
-
-// maybe includes in future.
 
 /**
  * StatusHandler,

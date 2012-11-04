@@ -1,3 +1,4 @@
+{* Folgendes noch nicht abgeschlossen -> Noch nicht funktionstüchtig. Daher auskommentiert
 {if $edit}<h3>Bearbeiten</h3>{else}<h3>Neuanlage</h3>{/if}
 <form class="modern_form" action="admgames/{if $edit}{$game->getId()}/edit{else}new{/if}" method="post" enctype="multipart/form-data">
     <div class="leftbar">
@@ -75,6 +76,7 @@
     </div>                    
     <br class="clear" />
 </form>
+*}
 
 <h3>Spiele</h3>
 <table>

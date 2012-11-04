@@ -1,16 +1,17 @@
 <?php
 
 /**
- * DefaultMobileContent
- * controls the default mobile page
+ * PopgamesconContent
+ * displays the list of popular games grouped by console
  *
  * PHP Version 5.3
  *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
+ * @date      04.11.2012
+ * @version   1.0 class documentated
+ * @package   Gamesportal
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
+ * @copyright Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browser/flshp/trunk/content/VPlanContent.php
  */
 class PopgamesconContent implements ContentFileContent {
 

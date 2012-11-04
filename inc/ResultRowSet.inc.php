@@ -11,19 +11,6 @@
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
  * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/ResultRowSet.class.php
  */
-// maybe includes in future.
-
-/**
- * Objective result row
- *
- * PHP Version 5.3
- *
- * @package   FLS::Database
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/ResultRowSet.class.php
- */
 class ResultRowSet {
     /**
      * @var array rows of a result

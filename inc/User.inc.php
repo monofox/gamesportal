@@ -8,9 +8,13 @@ use \FLS\Lib\Configuration\Configuration as Configuration;
  *
  * PHP Version 5.3
  *
+ * @date      04.11.2012
+ * @version   unknown (because of modified fls version). Added admin flag.
  * @package   FLS
  * @author    Website-Team <website-team@fls-wiesbaden.de>
+ * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
  * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
+ * @copyright 2012 Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
  * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/User.class.php
  */
@@ -36,6 +40,11 @@ class User extends Listenable {
     private $loginName;
 
     /**
+     * @var boolean check whether user is admin or not
+     */
+    private $admin;
+
+    /**
      * @var Database $db
      */
     private $db;
@@ -59,6 +68,7 @@ class User extends Listenable {
     public function User($userId = null) {
         $this->conf = Configuration::getInstance();
         $this->db = Database2::getInstance();
+        $this->admin = false;
 
         $this->id = $userId;
         if ($this->id == null && isset($_SESSION['userid'])) {
@@ -110,6 +120,15 @@ class User extends Listenable {
         } 
 
         return $uid;
+    }
+
+    /**
+     * Check whether the user is admin or not.
+     *
+     * @return boolean;
+     */
+    public function isAdmin() {
+        return $this->admin;
     }
 
     /**
@@ -241,7 +260,7 @@ class User extends Listenable {
      */
     private function loadUserData() {
         $sql = $this->db->q(
-            'SELECT userID, userFirstName, userLastName, userLogin
+            'SELECT userID, userFirstName, userLastName, userLogin, admin
             FROM %pusers
             WHERE userID = %i
             LIMIT 1',
@@ -251,6 +270,7 @@ class User extends Listenable {
             $this->name = $sql->getFirst()->userLastName;
             $this->firstname = $sql->getFirst()->userFirstName;
             $this->loginName = $sql->getFirst()->userLogin;
+            $this->admin = ($sql->getFirst()->admin == '1') ? true : false;
         }
     }
 

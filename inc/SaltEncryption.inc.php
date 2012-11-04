@@ -1,21 +1,4 @@
 <?php
-/**
- * SaltEncryption - Improved Hash Algorithm (IHA),
- * Generates a strong hash value from a weak password
- * Original written 2007 by Nils Reimers (php-einfach.de)
- *
- * PHP Version 5.3
- *
- * @package   FLS
- * @author    Website-Team <website-team@fls-wiesbaden.de>
- * @author    Nils Reimers <webmaster@php-einfach.de>
- * @copyright 2011-2012 Website-Team <website-team@fls-wiesbaden.de>
- * @copyright 2007 Nils Reimers <webmaster@php-einfach.de>
- * @license   LGPL2.1+ http://www.gnu.org/licenses/lgpl.html
- * @link      https://trac.fls-wiesbaden.de/browse/flshp/trunk/inc/SaltEncryption.class.php
- */
-
-// maybe includes in future.
 
 /**
  * SaltEncryption - Improved Hash Algorithm (IHA),

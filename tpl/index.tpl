@@ -51,6 +51,7 @@
                         <a href="guestbook" class="menu_item {if $content.mnu eq "guestbook"}menu_selected{/if}">Gästebuch</a>
                     </div>
                     <div class="menu_item_split"></div>
+                    {if User::getInstance()->isAdmin()}
                     <div class="menu_main_point">
                         <a href="#" class="menu_item">Administration</a>
                         <div class="menu_submenu">
@@ -61,6 +62,7 @@
                         </div>
                     </div>
                     <div class="menu_item_split"></div>
+                    {/if}
             </div>
         </div>
         <div id="info-bar">
@@ -103,7 +105,8 @@
                 <div class="box_content">
                     <div class="defaultTpl">
                         <p>Melden Sie sich mit Ihren persönlichen Daten
-                        ein, um kommentieren zu können: </p>
+                        ein, um kommentieren zu können: <br/><br/>
+                        Zugangsdaten: mono - mono</p>
                         <form action="user/login" class="userForm" accept-charset="utf-8" method="post" name="ulogin">
                             <label>Benutzername: <input type="text" name="login_name"/><br/>
                             <label>Kennwort: <input type="password" name="login_pass"/><br /><br />

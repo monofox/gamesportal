@@ -15,7 +15,8 @@ require_once('inc/Lib/Configuration/Configuration.inc.php');
  * @author    Lukas Schreiner <lukas.schreiner@gmail.com>
  * @copyright 2012 Lukas Schreiner <lukas.schreiner@gmail.com>
  * @license   GPLv3+ http://www.gnu.org/licenses/gpl.html
- * @version   0.1
+ * @version   1.0 class documanteted
+ * @date      04.11.2012
  */
 class Main {
 
